@@ -32,6 +32,7 @@ export const Pets = () => {
     
     axios.get("https://db-grads-0mjf-group-11.nw.r.appspot.com/dashboard/securities").then(
       res => {
+        console.log(res.data);
         const temp= [];
           res.data.map((datas) => {
               temp.push(datas);
