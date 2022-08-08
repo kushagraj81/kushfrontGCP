@@ -29,8 +29,10 @@ export const Pets = () => {
   
  const [filteredData,setFilteredData]=useState([]);
   useEffect(() => {
-    
-    axios.get("https://db-grads-0mjf-group-11.nw.r.appspot.com/dashboard/securities").then(
+    // https://db-grads-0mjf-group-11.nw.r.appspot.com
+    axios.get("https://db-grads-0mjf-group-11.nw.r.appspot.com/dashboard/securities",{headers: {
+      'Access-Control-Allow-Origin': '*',
+    }}).then(
       res => {
         console.log(res.data);
         const temp= [];
