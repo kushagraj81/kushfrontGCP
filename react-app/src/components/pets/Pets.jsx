@@ -30,7 +30,7 @@ export const Pets = () => {
  const [filteredData,setFilteredData]=useState([]);
   useEffect(() => {
     
-    axios.get("http://localhost:8080/dashboard/securities").then(
+    axios.get("https://db-grads-0mjf-group-11.nw.r.appspot.com/dashboard/securities").then(
       res => {
         const temp= [];
           res.data.map((datas) => {
